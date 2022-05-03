@@ -22,15 +22,7 @@ public class JobTest {
         Job job1 = new Job();
        assertNotEquals(job.getId(),job1.getId());
     }
-    Job job;
 
-    @Before
-    public void testobjects(){
-        new Job("Product tester", new Employer("ACME"), new Location("Desert"),
-                new PositionType("Quality control"), new CoreCompetency("Persistence"));
-       // make values to toString
-
-    }
     // test testJobConstructorSetsAllFields
     @Test
     public void testJobConstructorSetsAllFields(){
