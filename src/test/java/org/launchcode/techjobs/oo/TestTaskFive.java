@@ -84,7 +84,8 @@ public class TestTaskFive extends AbstractTest {
     public void testTestToStringContainsCorrectLabelsAndDataCallsToString (@Mocked Job job) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class jobTestClass = getClassByName("test.JobTest");
         JobTest jobTest = (JobTest) jobTestClass.getConstructor().newInstance();
-        Method testToStringContainsCorrectLabelsAndDataMethod = jobTestClass.getMethod("testToStringContainsCorrectLabelsAndData");
+        Method testToStringContainsCorrectLabelsAndDataMethod =
+                jobTestClass.getMethod("testToStringContainsCorrectLabelsAndData");
 
         new Expectations() {{
             job.toString(); minTimes = 1;
@@ -101,7 +102,8 @@ public class TestTaskFive extends AbstractTest {
     public void testTestToStringContainsCorrectLabelsAndDataCallsAssertions (@Mocked Assert mockedAssert) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, InstantiationException {
         Class jobTestClass = getClassByName("test.JobTest");
         JobTest jobTest = (JobTest) jobTestClass.getConstructor().newInstance();
-        Method testToStringContainsCorrectLabelsAndDataMethod = jobTestClass.getMethod("testToStringContainsCorrectLabelsAndData");
+        Method testToStringContainsCorrectLabelsAndDataMethod =
+                jobTestClass.getMethod("testToStringContainsCorrectLabelsAndData");
 
         new Expectations() {{
             Assert.assertEquals(anyString, anyString); minTimes = 1;
@@ -111,8 +113,10 @@ public class TestTaskFive extends AbstractTest {
     }
 
     @Test
-    public void testToStringContainsCorrectLabelsAndData() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {
-        Job job = createJob("Web Developer", "LaunchCode", "StL", "Back-end developer", "Java");
+    public void testToStringContainsCorrectLabelsAndData() throws ClassNotFoundException, InvocationTargetException,
+            NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+        Job job = createJob("Web Developer", "LaunchCode", "StL", "Back-end developer",
+                "Java");
         String jobString = getJobString(job);
         assertEquals(jobString, job.toString());
     }
