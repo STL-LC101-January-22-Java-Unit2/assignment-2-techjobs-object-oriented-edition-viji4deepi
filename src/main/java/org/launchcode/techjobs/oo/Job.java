@@ -103,18 +103,21 @@ public class Job {
     @Override
     public String toString() {
         String data = "Data not available";
-        if(name == ""){
+
+        if(name == ""||name == null){
             name = data;
-        } else if(employer.getValue() == ""){
+        }
+        if(employer.getValue() == ""||employer== null){
            employer.setValue(data);
-        } else if(location.getValue() == ""){
+        }
+        if(location.getValue() == ""||location == null){
             location.setValue(data);
-        }else if(positionType.getValue() == ""){
+        }
+        if(positionType.getValue() == ""||positionType== null){
             positionType.setValue(data);
-        } else if(coreCompetency.getValue() == "") {
+        }
+        if(coreCompetency.getValue() == ""||coreCompetency == null) {
             coreCompetency.setValue(data);
-        }else {
-            System.out.println("no data");
         }
         return
                 "\nID: " + id + '\n' +
