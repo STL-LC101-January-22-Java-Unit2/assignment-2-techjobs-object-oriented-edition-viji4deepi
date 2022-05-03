@@ -3,9 +3,9 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
 public class CoreCompetency extends JobField {
-    public CoreCompetency(int id) {
-        super(id);
-    }
+//    public CoreCompetency(int id) {
+//        super(id);
+//    }
 
     public CoreCompetency(String value) {
         super(value);

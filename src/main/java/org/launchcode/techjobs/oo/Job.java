@@ -109,10 +109,12 @@ public class Job {
            employer.setValue(data);
         } else if(location.getValue() == ""){
             location.setValue(data);
-        }else if (positionType.getValue() == ""){
+        }else if(positionType.getValue() == ""){
             positionType.setValue(data);
-        } else {
+        } else if(coreCompetency.getValue() == "") {
             coreCompetency.setValue(data);
+        }else {
+            System.out.println("no data");
         }
         return
                 "\nID: " + id + '\n' +

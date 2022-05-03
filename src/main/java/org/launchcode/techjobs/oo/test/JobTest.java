@@ -18,8 +18,9 @@ import static org.junit.Assert.*;
 public class JobTest {
     @Test
     public void testSettingJobId(){
-        Job jobs = new Job();
-       assertEquals(2,jobs.getId());
+        Job job = new Job();
+        Job job1 = new Job();
+       assertEquals(job.getId(),job1.getId());
     }
 
 
@@ -64,6 +65,15 @@ public class JobTest {
 
     }
 
+    @Test
+    public void testToStringStartsAndEndsWithNewLine(){
+
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData(){
+
+    }
 
 
 }

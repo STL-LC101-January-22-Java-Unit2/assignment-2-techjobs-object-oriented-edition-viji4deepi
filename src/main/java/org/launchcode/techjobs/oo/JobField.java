@@ -10,12 +10,13 @@ public abstract class JobField {
     //constructor
 
 
-    public JobField(int id) {
-        id = nextId;
+    public JobField() {
+        this.id = nextId;
         nextId++;
     }
 
     public JobField(String value){
+        this();
         this.value = value;
     }
 
@@ -46,6 +47,7 @@ public abstract class JobField {
     public String getValue() {
         return value;
     }
+
 
     public void setValue(String value) {
         this.value = value;

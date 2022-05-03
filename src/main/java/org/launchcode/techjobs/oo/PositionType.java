@@ -3,9 +3,9 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
 public class PositionType extends JobField{
-    public PositionType(int id) {
-        super(id);
-    }
+//    public PositionType(int id) {
+//        super(id);
+//    }
 
     public PositionType(String value) {
         super(value);
