@@ -24,6 +24,7 @@ public class Job {
 
     //constructor for fields
     public Job(String name,Employer employer,Location location,PositionType positionType,CoreCompetency coreCompetency){
+        this();
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -48,8 +49,6 @@ public class Job {
     }
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
-
-    //getters for id field
 
 
     public int getId() {
@@ -96,17 +95,31 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+
+
     //toString
 
 
     @Override
     public String toString() {
+        String data = "Data not available";
+        if(name == ""){
+            name = data;
+        } else if(employer.getValue() == ""){
+           employer.setValue(data);
+        } else if(location.getValue() == ""){
+            location.setValue(data);
+        }else if (positionType.getValue() == ""){
+            positionType.setValue(data);
+        } else {
+            coreCompetency.setValue(data);
+        }
         return
-                "ID:" + id + '\n' +
-                        "Name:" + name + '\n' +
-                        "Employer:" + employer + '\n' +
-                        "Location:" + location + '\n' +
-                        "Position Type:" + positionType + '\n' +
-                        "Core Competency:" + coreCompetency + '\n';
+                "\nID: " + id + '\n' +
+                        "Name: " + name + '\n' +
+                        "Employer: " + employer + '\n' +
+                        "Location: " + location + '\n' +
+                        "Position Type: " + positionType + '\n' +
+                        "Core Competency: " + coreCompetency + '\n';
     }
 }
