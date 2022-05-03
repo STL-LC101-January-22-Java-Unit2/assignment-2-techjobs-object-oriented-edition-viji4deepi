@@ -5,9 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.launchcode.techjobs.oo.*;
-
 import java.lang.String.*;
-
 import static org.junit.Assert.*;
 
 /**
