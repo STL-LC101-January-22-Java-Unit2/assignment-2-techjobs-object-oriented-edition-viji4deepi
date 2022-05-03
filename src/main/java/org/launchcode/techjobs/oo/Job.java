@@ -106,21 +106,16 @@ public class Job {
 
         if(name == ""||name == null){
             name = data;
-        }
-        if(employer.getValue() == ""||employer== null){
+        } if(employer.getValue() == ""){
            employer.setValue(data);
-        }
-        if(location.getValue() == ""||location == null){
+        } if(location.getValue() == ""||location.getValue() == null){
             location.setValue(data);
-        }
-        if(positionType.getValue() == ""||positionType== null){
+        } if(positionType.getValue() == ""||positionType.getValue() == null){
             positionType.setValue(data);
-        }
-        if(coreCompetency.getValue() == ""||coreCompetency == null) {
+        }  if(coreCompetency.getValue() == ""||coreCompetency.getValue() == null) {
             coreCompetency.setValue(data);
         }
-        return
-                "\nID: " + id + '\n' +
+        return  "\nID: " + id + '\n' +
                         "Name: " + name + '\n' +
                         "Employer: " + employer + '\n' +
                         "Location: " + location + '\n' +
